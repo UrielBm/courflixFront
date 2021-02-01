@@ -1,0 +1,42 @@
+$principalColor: #222831;
+$secondColor: #30475e;
+$secondColorDegradado: #1f7ddb;
+$thirdColor: #f2a365;
+$thirdColorDegradado: #d16410;
+$fourthColor: #ececec;
+.button {
+  border: none;
+  border-radius: 2rem;
+  font-size: 2rem;
+  padding: 0.3rem 2rem;
+  box-sizing: border-box;
+}
+.register {
+  @extend .button;
+  background-color: $secondColor;
+  transition: background-color 0.3s;
+}
+.register:hover {
+  background-color: $secondColorDegradado;
+}
+.login {
+  @extend .button;
+  background-color: $thirdColor;
+  transition: background-color 0.3s;
+}
+.login:hover {
+  background-color: $thirdColorDegradado;
+}
+.play {
+  @extend .button;
+  font-size: 1rem;
+  border-radius: 1rem;
+  margin: 2rem;
+  background-color: $secondColor;
+  color: $fourthColor;
+}
+@media (min-width: 360px) {
+  .button {
+    margin: 1.5rem 0;
+  }
+}

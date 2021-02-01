@@ -1,0 +1,17 @@
+$principalColor: #1a1a2e;
+$secondColor: #16213e;
+$thirdColor: #0f3460;
+$fourthColor: #e94560;
+$degradadoFourth: #cf1534;
+.submit {
+  min-width: 7rem;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 3rem;
+  background-color: $fourthColor;
+  padding: 0.3rem 1rem;
+  transition: background-color 0.3s;
+}
+.submit:hover {
+  background-color: $degradadoFourth;
+}

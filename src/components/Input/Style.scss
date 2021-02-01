@@ -1,0 +1,15 @@
+$principalColor: #1a1a2e;
+$secondColor: #16213e;
+$thirdColor: #0f3460;
+$fourthColor: #e94560;
+.input {
+  width: 340px;
+  padding: 0.5rem 1rem;
+  border-radius: 5rem;
+  box-sizing: border-box;
+  margin: 0.6rem 0;
+}
+.input:focus {
+  background-color: black;
+  color: white;
+}

@@ -1,0 +1,12 @@
+$principalColor: #222831;
+$secondColor: #30475e;
+$thirdColor: #f2a365;
+$fourthColor: #ececec;
+.wrapperHome {
+  background-color: $principalColor;
+  min-width: 100vw;
+  min-height: 100vh;
+  .primerText {
+    color: $fourthColor;
+  }
+}

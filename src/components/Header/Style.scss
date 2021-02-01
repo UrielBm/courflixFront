@@ -1,0 +1,31 @@
+.wrapperNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .wrapperHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    .wrapperMenuHambuerguesa {
+      display: none;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .wrapperNav {
+    display: block;
+    box-sizing: border-box;
+    .wrapperHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      box-sizing: border-box;
+      .wrapperMenuHambuerguesa {
+        display: block;
+      }
+    }
+  }
+}
