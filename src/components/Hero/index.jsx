@@ -2,9 +2,12 @@ import Button from "../Button";
 import Title from "../Title";
 import "./Style.scss";
 function Hero({ movie }) {
-  const { category, desc, image, name, type } = movie;
+  //const { category, desc, image, name, type } = movie;
   const background = {
-    backgroundImage: `url('${image}')`,
+    backgroundImage: `linear-gradient(
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.5)
+    ),url('${movie?.image}')`,
   };
 
   return (
@@ -13,17 +16,17 @@ function Hero({ movie }) {
         <h2>Original de COURFLIX</h2>
       </div>
       <div className="wrapperTitle">
-        <Title title={name} />
+        <Title title={movie?.name} />
       </div>
       <div className="wrapperButtons">
         <Button style={`play`} text="Reproducir" />
         <Button style={`play`} text="+ mi lista" />
       </div>
       <div className="wrapperExtraInfo">
-        <p>{`¡ Ve la ${type} de categoria ${category} Ahora !`}</p>
+        <p>{`¡ Ve la ${movie?.type} de categoria ${movie?.category} Ahora !`}</p>
       </div>
       <div className="wrapperDescription">
-        <p>{desc}</p>
+        <p>{movie?.desc}</p>
       </div>
     </section>
   );

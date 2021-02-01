@@ -1,0 +1,8 @@
+.subtitle {
+  font-size: 1.6rem;
+  color: white;
+}
+.subtitle::first-letter {
+  font-size: rem;
+  text-transform: uppercase;
+}

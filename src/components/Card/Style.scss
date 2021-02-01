@@ -1,0 +1,49 @@
+.wrapperCard {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border: none;
+  border-radius: 0.8rem;
+  width: 340px;
+  height: 260px;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  .wrapperInfo {
+    width: 100%;
+    height: 40%;
+    padding: 1rem 0;
+    text-align: center;
+    color: white;
+    .wrapperName {
+      margin: 0.5rem 0;
+      font-size: 0rem;
+      .name {
+        font-size: 0rem;
+      }
+    }
+    .wrapperCategory {
+      @extend .wrapperName;
+    }
+  }
+  .wrapperInfo:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    .wrapperName {
+      @extend .wrapperName;
+      font-size: 1rem;
+      .name {
+        @extend .name;
+        font-size: 1.5rem;
+      }
+    }
+    .wrapperName::first-letter {
+      text-transform: uppercase;
+      font-size: 1.3rem;
+    }
+    .wrapperCategory::first-letter {
+      text-transform: uppercase;
+      font-size: 1.3rem;
+    }
+  }
+}
