@@ -35,6 +35,14 @@ $fourthColor: #ececec;
   background-color: $secondColor;
   color: $fourthColor;
 }
+.search {
+  @extend .button;
+  background-color: transparent;
+  border: 2px solid $thirdColor;
+  color: $thirdColor;
+  font-size: 1.2rem;
+  border-radius: 0.8rem;
+}
 @media (min-width: 360px) {
   .button {
     margin: 1.5rem 0;

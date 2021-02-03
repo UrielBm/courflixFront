@@ -21,6 +21,7 @@ $fourthColor: #ececec;
     width: 50%;
     height: 100vh;
     background-color: $principalColor;
+    z-index: 10;
     .linkOptions {
       color: $fourthColor;
       font-size: 1rem;

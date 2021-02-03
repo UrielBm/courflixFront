@@ -5,4 +5,11 @@ $fourthColor: #ececec;
 .wrapperHome {
   background-color: $principalColor;
   min-height: 100vh;
+  .wrapperMovies {
+    padding: 0.5rem 0 0rem;
+  }
+  .wrapperSeries {
+    @extend .wrapperMovies;
+    padding: 0.5rem 0 1rem;
+  }
 }

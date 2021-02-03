@@ -21,16 +21,22 @@ const responsive = {
   },
 };
 function CarrucelImg({ title, arrayItems }) {
-  console.log(title, arrayItems);
+  //console.log(title, arrayItems);
   return (
     <div className="wrapperCarrusel">
       <section className="wrapperSection">
         <Subtitle title={title} />
       </section>
       <section className="wrapperCards">
-        <Carousel responsive={responsive} infinite={true} itemClass="item">
-          {arrayItems.map((item, index, key) => {
-            return <Card item={item} key={key} id={index} />;
+        <Carousel
+          responsive={responsive}
+          infinite={true}
+          itemClass="item"
+          arrows={true}
+          removeArrowOnDeviceType={["mobile", "tablet"]}
+        >
+          {arrayItems.map((item, index) => {
+            return <Card item={item} key={index} />;
           })}
         </Carousel>
         ;

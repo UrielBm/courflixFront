@@ -18,13 +18,15 @@ function Header() {
           </Link>
         </div>
       </header>
-      {isOpen ? (
-        <NavBar className="wrapperLinks" />
-      ) : (
-        <>
-          <NavBar className="wrapperLinksNone" />
-        </>
-      )}
+      <div className="wrapperNavBar">
+        {isOpen ? (
+          <NavBar className="wrapperLinks" />
+        ) : (
+          <>
+            <NavBar className="wrapperLinksNone" />
+          </>
+        )}
+      </div>
     </div>
   );
 }

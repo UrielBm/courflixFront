@@ -1,7 +1,17 @@
+$principalColor: #222831;
+$secondColor: #30475e;
+$secondColorDegradado: #1f7ddb;
+$thirdColor: #f2a365;
+$thirdColorDegradado: #d16410;
+$fourthColor: #ececec;
 .wrapperNav {
   display: flex;
+  position: fixed;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  background-color: $principalColor;
+  z-index: 10;
   .wrapperHeader {
     display: flex;
     justify-content: space-between;
@@ -11,6 +21,10 @@
     .wrapperMenuHambuerguesa {
       display: none;
     }
+  }
+  .wrapperNavBar {
+    box-sizing: border-box;
+    margin-right: 1rem;
   }
 }
 @media (max-width: 768px) {

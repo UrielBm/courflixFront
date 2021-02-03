@@ -2,7 +2,7 @@ import Button from "../Button";
 import Title from "../Title";
 import "./Style.scss";
 function Hero({ movie }) {
-  //const { category, desc, image, name, type } = movie;
+  console.log(movie);
   const background = {
     backgroundImage: `linear-gradient(
       rgba(0, 0, 0, 0.8),
