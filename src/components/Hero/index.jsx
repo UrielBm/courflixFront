@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 import Button from "../Button";
 import Title from "../Title";
 import "./Style.scss";
 function Hero({ movie }) {
-  console.log(movie);
+  //console.log(movie);
   const background = {
     backgroundImage: `linear-gradient(
       rgba(0, 0, 0, 0.8),
@@ -19,7 +20,9 @@ function Hero({ movie }) {
         <Title title={movie?.name} />
       </div>
       <div className="wrapperButtons">
-        <Button style={`play`} text="Reproducir" />
+        <Link to={`play/movie=${movie?.id}`}>
+          <Button style={`play`} text="Reproducir" />
+        </Link>
         <Button style={`play`} text="+ mi lista" />
       </div>
       <div className="wrapperExtraInfo">

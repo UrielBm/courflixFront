@@ -1,0 +1,22 @@
+.wrapperVideo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0 0;
+  .video {
+    width: 1080px;
+    height: 550px;
+  }
+}
+@media (max-width: 720px) {
+  .wrapperVideo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0 0;
+    .video {
+      width: 350px;
+      height: auto;
+    }
+  }
+}

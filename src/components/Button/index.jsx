@@ -1,7 +1,9 @@
 import "./Style.scss";
 function Button({ text, style, action }) {
   const handleAction = () => {
-    action();
+    if (action) {
+      action();
+    }
   };
 
   return (

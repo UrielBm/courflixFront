@@ -11,16 +11,19 @@ import Series from "./pages/Series";
 import Movies from "./pages/Movies";
 import Reciente from "./pages/Reciente";
 import MyList from "./pages/MyList";
+import Play from "./pages/Play";
 ReactDOM.render(
   <Router>
     <Route exact path="/" component={App} />
     <Route exact path="/register" component={Register} />
     <Route exact path="/login" component={Login} />
     <Route exact path="/home" component={Home} />
+    <Route exact path="/movie=:id" component={Home} />
     <Route exact path="/series" component={Series} />
     <Route exact path="/movies" component={Movies} />
     <Route exact path="/reciente" component={Reciente} />
     <Route exact path="/mylist" component={MyList} />
+    <Route exact path="/play/movie=:id" component={Play} />
   </Router>,
   document.getElementById("myApp")
 );

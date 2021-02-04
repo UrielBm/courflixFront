@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 import Header from "../../components/Header";
 import axios from "axios";
 import "./Style.scss";
-import Card from "../../components/Card";
 import Button from "../../components/Button";
 import Search from "../../components/Search";
+import ContentMovies from "../../components/ContentMovies";
 function Movies() {
   const [ArrayMovies, setArrayMovies] = useState([]);
-  const [page, SetPage] = useState(2);
+  const [page, SetPage] = useState(0);
+  const [Loading, setLoading] = useState(true);
   useEffect(() => {
     handleGetMovies();
   }, []);
@@ -16,43 +17,52 @@ function Movies() {
       "https://backendcourflix.herokuapp.com/movies"
     );
     setArrayMovies(listMovies.data);
+    SetPage(2);
+    setLoading(false);
   };
   const handleAddMovies = async () => {
     const addlistMovies = await axios.get(
       `https://backendcourflix.herokuapp.com/movies?pag=${page}`
     );
     const { data } = addlistMovies;
-    const concantlist = ArrayMovies.concat(data);
-    setArrayMovies(concantlist);
+    setArrayMovies([...ArrayMovies, ...data]);
     SetPage(page + 1);
   };
-  //console.log(ArrayMovies);
+  const handleSearch = (value) => {
+    if (value === "") {
+      handleGetMovies();
+    }
+    const moviesFilter = ArrayMovies.filter((movie) => {
+      return movie.name.toLowerCase().match(value.toLowerCase());
+    });
+    setArrayMovies(moviesFilter);
+  };
   return (
     <main className="wrapperHome">
       <Header />
       <div className="wrapperSearch">
-        <Search />
+        <Search accion={handleSearch} />
       </div>
-      <div className="wrapperMoviesofMovies">
-        {ArrayMovies.map((item, index) => {
-          return (
-            <article className="wrapperCardMovies" key={index}>
-              <Card item={item} />
-            </article>
-          );
-        })}
-      </div>
-      <div className="wrapperSearchButton">
-        {page <= 4 ? (
-          <Button
-            action={handleAddMovies}
-            style={`search`}
-            text="Buscar más peliculas"
-          />
-        ) : (
-          <></>
-        )}
-      </div>
+      {Loading ? (
+        <p>Loading...</p>
+      ) : (
+        <>
+          <div className="wrapperMoviesofMovies">
+            <ContentMovies movies={ArrayMovies} />
+          </div>
+          <div className="wrapperSearchButton">
+            {page <= 4 ? (
+              <Button
+                action={handleAddMovies}
+                style={`search`}
+                text="Buscar más peliculas"
+              />
+            ) : (
+              <></>
+            )}
+          </div>
+        </>
+      )}
     </main>
   );
 }

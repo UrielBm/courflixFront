@@ -1,8 +1,17 @@
 import "./Style.scss";
-function Search() {
+function Search(props) {
+  const handleOnChange = (e) => {
+    const { value } = e.target;
+    props.accion(value);
+  };
   return (
     <>
-      <input type="text" className="Search" placeholder="buscar pelicula..." />
+      <input
+        type="text"
+        className="Search"
+        placeholder="buscar pelicula..."
+        onChange={handleOnChange}
+      />
     </>
   );
 }

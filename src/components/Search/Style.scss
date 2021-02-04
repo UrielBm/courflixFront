@@ -1,10 +1,18 @@
+$principalColor: #222831;
+$secondColor: #30475e;
+$thirdColor: #f2a365;
+$fourthColor: #ececec;
 .Search {
   width: 340px;
-  border: none;
-  background-color: white;
-  color: black;
+  border: 2px solid $thirdColor;
+  background-color: transparent;
+  color: $thirdColor;
   border-radius: 3rem;
   padding: 0.6rem 0;
   font-size: 1rem;
   text-align: center;
+  outline: none;
+}
+.Search::placeholder {
+  color: $thirdColor;
 }
