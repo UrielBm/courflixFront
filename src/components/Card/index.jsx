@@ -5,7 +5,7 @@ function Card({ item }) {
     backgroundImage: `url('${item?.image}')`,
   };
   return (
-    <Link to={`/movie=${item?.id}`}>
+    <Link to={`/home/movie=${item?.id}`}>
       <section className="wrapperCard" style={background}>
         <div className="wrapperInfo">
           <h3 className="wrapperName">

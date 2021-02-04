@@ -20,7 +20,7 @@ function Hero({ movie }) {
         <Title title={movie?.name} />
       </div>
       <div className="wrapperButtons">
-        <Link to={`play/movie=${movie?.id}`}>
+        <Link to={`/play/movie=${movie?.id}`}>
           <Button style={`play`} text="Reproducir" />
         </Link>
         <Button style={`play`} text="+ mi lista" />
