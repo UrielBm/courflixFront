@@ -1,0 +1,28 @@
+$principalColor: #222831;
+$secondColor: #30475e;
+$secondColorDegradado: #1f7ddb;
+$thirdColor: #e50914;
+$thirdColorDegradado: #8f141a;
+$fourthColor: #ececec;
+.select {
+  width: 300px;
+  border: 1px solid $thirdColor;
+  border-radius: 3rem;
+  padding: 1rem 1.2rem;
+  box-sizing: border-box;
+  background: transparent;
+  color: $thirdColor;
+  font-size: 1.3rem;
+  outline: none;
+  -moz-appearance: none; /* Firefox */
+  appearance: none;
+}
+.select:active {
+  background: transparent;
+}
+@media (max-width: 768px) {
+  .select {
+    width: 200px;
+    font-size: 1rem;
+  }
+}

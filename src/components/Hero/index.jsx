@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Button from "../Button";
 import Title from "../Title";
 import "./Style.scss";
-function Hero({ movie }) {
+function Hero({ movie, play }) {
   //console.log(movie);
   const background = {
     backgroundImage: `linear-gradient(
@@ -20,10 +20,18 @@ function Hero({ movie }) {
         <Title title={movie?.name} />
       </div>
       <div className="wrapperButtons">
-        <Link to={`/play/movie=${movie?.id}`}>
-          <Button style={`play`} text="Reproducir" />
-        </Link>
-        <Button style={`play`} text="+ mi lista" />
+        {play === true ? (
+          <>
+            <Link to={`/play/movie=${movie?.id}`}>
+              <Button style={`play`} text="Reproducir" />
+            </Link>
+            <Link to={`/mylist`}>
+              <Button style={`play`} text="+ mi lista" />
+            </Link>
+          </>
+        ) : (
+          <></>
+        )}
       </div>
       <div className="wrapperExtraInfo">
         <p>{`¡ Ve la ${movie?.type} de categoria ${movie?.category} Ahora !`}</p>

@@ -4,11 +4,11 @@ $secondColorDegradado: #1f7ddb;
 $thirdColor: #e50914;
 $thirdColorDegradado: #8f141a;
 $fourthColor: #ececec;
-.subtitle {
-  font-size: 1.6rem;
-  color: $fourthColor;
+.wrapperSeason {
+  display: flex;
+  justify-content: flex-start;
+  padding: 5rem 1rem 1rem;
 }
-.subtitle::first-letter {
-  font-size: 2rem;
-  text-transform: uppercase;
+.wrapperEpisodes {
+  padding-bottom: 2rem;
 }

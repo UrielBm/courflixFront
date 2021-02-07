@@ -1,9 +1,10 @@
 $principalColor: #222831;
 $secondColor: #30475e;
 $secondColorDegradado: #1f7ddb;
-$thirdColor: #f2a365;
-$thirdColorDegradado: #d16410;
+$thirdColor: #e50914;
+$thirdColorDegradado: #8f141a;
 $fourthColor: #ececec;
+
 .button {
   border: none;
   border-radius: 2rem;
@@ -34,6 +35,10 @@ $fourthColor: #ececec;
   margin: 2rem;
   background-color: $secondColor;
   color: $fourthColor;
+  transition: background-color 0.3s;
+}
+.play:hover {
+  background-color: $thirdColor;
 }
 .search {
   @extend .button;
@@ -42,6 +47,12 @@ $fourthColor: #ececec;
   color: $thirdColor;
   font-size: 1.2rem;
   border-radius: 0.8rem;
+  outline: none;
+  transition: background-color 0.3s;
+}
+.search:hover {
+  background-color: $thirdColorDegradado;
+  color: $fourthColor;
 }
 @media (min-width: 360px) {
   .button {

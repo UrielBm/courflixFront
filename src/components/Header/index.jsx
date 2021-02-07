@@ -10,7 +10,7 @@ function Header() {
     <div className="wrapperNav">
       <header className="wrapperHeader">
         <div className="wrapperMenuHambuerguesa">
-          <Hamburger color="#f2a365" toggled={isOpen} toggle={setOpen} />
+          <Hamburger color="#e50914" toggled={isOpen} toggle={setOpen} />
         </div>
         <div className="wrapperLogo">
           <Link to="/home">

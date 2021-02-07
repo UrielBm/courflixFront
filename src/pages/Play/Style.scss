@@ -1,3 +1,7 @@
+$principalColor: #222831;
+$secondColor: #30475e;
+$thirdColor: #e50914;
+$fourthColor: #ececec;
 .wrapperVideo {
   display: flex;
   justify-content: center;
@@ -6,6 +10,14 @@
   .video {
     width: 1080px;
     height: 550px;
+  }
+}
+.wrapperHeroSeries {
+  padding-bottom: 2rem;
+  .NoSeries {
+    text-align: center;
+    margin-top: 0.5rem;
+    color: $fourthColor;
   }
 }
 @media (max-width: 720px) {

@@ -11,11 +11,13 @@ function Home() {
   const [Movie, SetMovie] = useState({});
   const [ArraySeries, SetArraySeries] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [Pag, SetPag] = useState(1);
   useEffect(() => {
+    handleRandomPages();
     const handleRequestMovies = async () => {
       let movie;
       const listMovies = await axios.get(
-        "https://backendcourflix.herokuapp.com/movies?pag=3"
+        `https://backendcourflix.herokuapp.com/movies?pag=${Pag}`
       );
       if (id) {
         movie = await axios.get(
@@ -36,24 +38,35 @@ function Home() {
       setLoading(false);
     };
     handleRequestMovies();
-  }, [id]);
-
+  }, [id, Pag]);
+  const handleRandomPages = () => {
+    const pag = Math.floor(Math.random() * (4 - 1)) + 1;
+    SetPag(pag);
+  };
   return (
     <main className="wrapperHome">
       <section className="wrapperHeader">
         <Header />
       </section>
-      <section>{loading ? <p>loading...</p> : <Hero movie={Movie} />}</section>
+      <section>
+        {loading ? (
+          <div className="wrapperLoading">
+            <div className="loading"></div>
+          </div>
+        ) : (
+          <Hero movie={Movie} play={true} />
+        )}
+      </section>
       <section className="wrapperMovies">
         {loading ? (
-          <p>loading...</p>
+          <></>
         ) : (
           <CarrucelImg title="movies" arrayItems={ArrayMovies} />
         )}
       </section>
       <section className="wrapperSeries">
         {loading ? (
-          <p>loading...</p>
+          <></>
         ) : (
           <CarrucelImg title="Series" arrayItems={ArraySeries} />
         )}

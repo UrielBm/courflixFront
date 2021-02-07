@@ -1,17 +1,18 @@
-$principalColor: #1a1a2e;
-$secondColor: #16213e;
-$thirdColor: #0f3460;
-$fourthColor: #e94560;
-$degradadoFourth: #cf1534;
+$principalColor: #222831;
+$secondColor: #30475e;
+$secondColorDegradado: #1f7ddb;
+$thirdColor: #e50914;
+$thirdColorDegradado: #8f141a;
+$fourthColor: #ececec;
 .submit {
   min-width: 7rem;
   font-size: 1.3rem;
   border: none;
   border-radius: 3rem;
-  background-color: $fourthColor;
+  background-color: $thirdColor;
   padding: 0.3rem 1rem;
   transition: background-color 0.3s;
 }
 .submit:hover {
-  background-color: $degradadoFourth;
+  background-color: $thirdColorDegradado;
 }

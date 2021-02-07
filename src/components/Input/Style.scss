@@ -1,7 +1,9 @@
-$principalColor: #1a1a2e;
-$secondColor: #16213e;
-$thirdColor: #0f3460;
-$fourthColor: #e94560;
+$principalColor: #222831;
+$secondColor: #30475e;
+$secondColorDegradado: #1f7ddb;
+$thirdColor: #e50914;
+$thirdColorDegradado: #8f141a;
+$fourthColor: #ececec;
 .input {
   width: 340px;
   padding: 0.5rem 1rem;
@@ -10,6 +12,6 @@ $fourthColor: #e94560;
   margin: 0.6rem 0;
 }
 .input:focus {
-  background-color: black;
-  color: white;
+  background-color: $principalColor;
+  color: $fourthColor;
 }

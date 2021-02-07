@@ -44,7 +44,9 @@ function Movies() {
         <Search accion={handleSearch} />
       </div>
       {Loading ? (
-        <p>Loading...</p>
+        <div className="wrapperLoading">
+          <div className="loading"></div>
+        </div>
       ) : (
         <>
           <div className="wrapperMoviesofMovies">

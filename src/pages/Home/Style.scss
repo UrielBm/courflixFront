@@ -1,6 +1,6 @@
 $principalColor: #222831;
 $secondColor: #30475e;
-$thirdColor: #f2a365;
+$thirdColor: #e50914;
 $fourthColor: #ececec;
 .wrapperHome {
   background-color: $principalColor;
@@ -11,5 +11,28 @@ $fourthColor: #ececec;
   .wrapperSeries {
     @extend .wrapperMovies;
     padding: 0.5rem 0 1rem;
+  }
+}
+.wrapperLoading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  .loading {
+    border: 15px solid $secondColor;
+    border-top-color: $thirdColor;
+    border-top-style: groove;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    animation: loading 0.5s linear infinite;
+  }
+}
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

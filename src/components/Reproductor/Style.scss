@@ -1,0 +1,18 @@
+.movie {
+  width: 1080px;
+  height: 550px;
+}
+.serie {
+  width: 40rem;
+  height: 27rem;
+}
+@media (max-width: 720px) {
+  .movie {
+    width: 350px;
+    height: auto;
+  }
+  .serie {
+    width: 350px;
+    height: auto;
+  }
+}
