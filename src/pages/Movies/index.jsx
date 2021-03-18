@@ -41,7 +41,7 @@ function Movies() {
     <main className="wrapperHome">
       <Header />
       <div className="wrapperSearch">
-        <Search accion={handleSearch} />
+        <Search accion={handleSearch} text="Buscar películas ..." />
       </div>
       {Loading ? (
         <div className="wrapperLoading">

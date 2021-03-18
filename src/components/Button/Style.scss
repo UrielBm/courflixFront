@@ -38,6 +38,7 @@ $fourthColor: #ececec;
   transition: background-color 0.3s;
 }
 .play:hover {
+  cursor: pointer;
   background-color: $thirdColor;
 }
 .search {

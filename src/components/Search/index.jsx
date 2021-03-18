@@ -9,7 +9,7 @@ function Search(props) {
       <input
         type="text"
         className="Search"
-        placeholder="buscar pelicula..."
+        placeholder={props.text}
         onChange={handleOnChange}
       />
     </>

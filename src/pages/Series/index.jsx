@@ -30,7 +30,7 @@ function Series() {
     <main className="wrapperHome">
       <Header />
       <div className="wrapperSearch">
-        <Search accion={handleSearch} />
+        <Search accion={handleSearch} text="Buscar alguna Serie ..." />
       </div>
       {Loading ? (
         <div className="wrapperLoading">

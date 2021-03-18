@@ -22,7 +22,7 @@ function Hero({ movie, play }) {
       <div className="wrapperButtons">
         {play === true ? (
           <>
-            <Link to={`/play/movie=${movie?.id}`}>
+            <Link to={`/play/movie/${movie?.id}`}>
               <Button style={`play`} text="Reproducir" />
             </Link>
             <Link to={`/mylist`}>
